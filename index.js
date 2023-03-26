@@ -2,7 +2,10 @@ import express from "express";
 import fs from "fs"
 const app = express();
 
-const PORT = 4000;
+const PORT = process.env.PORT;
+
+app.use(express.json())
+
 
 app.get('/', function(request,response){
     response.send("How you doin.......")
